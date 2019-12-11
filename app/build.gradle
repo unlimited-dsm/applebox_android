@@ -4,6 +4,8 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'kotlin-kapt'
+
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.0"
@@ -27,6 +29,9 @@ android {
 }
 
 dependencies {
+
+    def dagger_version = "2.24"
+
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.1.0'
@@ -35,11 +40,52 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     implementation 'androidx.cardview:cardview:1.0.0'
-
-​	implementation 'com.google.android.material:material:1.0.0'
-
     implementation 'androidx.coordinatorlayout:coordinatorlayout:1.1.0'
+
     implementation 'com.github.bumptech.glide:glide:4.10.0'
-    }
+
+    implementation 'com.google.android.material:material:1.0.0'
+
+    api "com.google.dagger:dagger:$dagger_version"
+    kapt "com.google.dagger:dagger-compiler:$dagger_version"
+    api "com.google.dagger:dagger-android:$dagger_version"
+    api "com.google.dagger:dagger-android-support:$dagger_version"
+    kapt "com.google.dagger:dagger-android-processor:$dagger_version"
+
+    def rxjava = '2.2.8'
+    def rxandroid = '2.0.2'
+    def okhttp = '4.1.0'
+    def retrofit = '2.6.1'
+    def navigation = '2.1.0'
+    def viewmodel = '2.1.0'
+    def nav_version = "2.1.0"
+    def map_version = "17.0.0"
+    // RxJava, RxAndroid
+    implementation "io.reactivex.rxjava2:rxjava:${rxjava}"
+    implementation "io.reactivex.rxjava2:rxandroid:${rxandroid}"
+    // RxJava - RxAndroid Adapter
+    implementation "com.squareup.retrofit2:adapter-rxjava2:2.6.2"
+    // RxLifecycle
+    implementation 'com.trello.rxlifecycle2:rxlifecycle-android:2.2.1'
+    implementation 'com.trello.rxlifecycle2:rxlifecycle-components:2.2.1'
+
+    // Retrofit2, GsonConverter
+    implementation "com.squareup.okhttp3:okhttp:${okhttp}"
+    implementation "com.squareup.retrofit2:retrofit:${retrofit}"
+    implementation "com.squareup.retrofit2:converter-gson:${retrofit}"
+
+    // Navigation
+    implementation "androidx.navigation:navigation-fragment:${navigation}"
+    implementation "androidx.navigation:navigation-ui:${navigation}"
+
+    // LiveData, ViewModel
+    implementation "androidx.lifecycle:lifecycle-viewmodel:${viewmodel}"
+    implementation "androidx.lifecycle:lifecycle-extensions:${viewmodel}"
+
+    // navigation
+    implementation "androidx.navigation:navigation-fragment:${nav_version}"
+    implementation "androidx.navigation:navigation-ui:{Ze$nav_version}"
+}
