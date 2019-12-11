@@ -10,7 +10,5 @@ abstract class BaseViewModel() : ViewModel(), LifeCycleListener {
     private val _toast = MutableLiveData<String>()
     val toast : LiveData<String> = _toast
 
-    
-
     abstract fun clear()
 }

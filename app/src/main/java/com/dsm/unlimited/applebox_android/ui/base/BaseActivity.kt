@@ -15,10 +15,11 @@ abstract class BaseActivity<T : ViewDataBinding>() : DaggerAppCompatActivity() {
     val lifeCycleManager = LifeCycleManager()
     abstract val viewModel : BaseViewModel
     abstract val layout : Int
-    val binding : T by lazy { DataBindingUtil.setContentView(this,layout) }
+    lateinit var binding : T
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = DataBindingUtil.setContentView(this,layout)
         binding.lifecycleOwner = this
         add(viewModel)
         viewModel.toast.observe(this, Observer { toast(it) })
