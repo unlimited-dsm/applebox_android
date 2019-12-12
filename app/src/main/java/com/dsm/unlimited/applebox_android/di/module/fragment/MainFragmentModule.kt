@@ -8,8 +8,13 @@ import dagger.Module
 import dagger.Provides
 import dagger.android.ContributesAndroidInjector
 
-@Module
+@Module(includes = [MainInjectModule::class])
 abstract class MainFragmentModule() {
+
+}
+
+@Module
+class MainInjectModule() {
     @Provides
     fun viewModel(fragment : MainFragment, factory : MainViewModelFactory) = ViewModelProviders.of(fragment, factory)[MainViewModel::class.java]
 
