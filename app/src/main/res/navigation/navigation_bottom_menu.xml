@@ -19,6 +19,8 @@
 
     <fragment
         android:id="@+id/item_profile"
+        android:name="com.dsm.unlimited.applebox_android.ui.fragment.MainProfileFragment"
+        android:label="MainProfileFragment"
         tools:layout="@layout/fragment_main_profile"/>
 
     <fragment

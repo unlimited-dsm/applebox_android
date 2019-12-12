@@ -1,6 +1,5 @@
 package com.dsm.unlimited.applebox_android.di.module.fragment
 
-import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import com.dsm.unlimited.applebox_android.ui.fragment.MainProfileFragment
 import com.dsm.unlimited.applebox_android.viewmodel.MainProfileViewModel
@@ -11,7 +10,7 @@ import dagger.Provides
 @Module
 class MainProfileModule() {
     @Provides
-    fun viewModel(fragment : MainProfileFragment, factory : ViewModelProvider.Factory) : MainProfileViewModel = ViewModelProviders.of(fragment,factory)[MainProfileViewModel::class.java]
+    fun viewModel(fragment : MainProfileFragment, factory : MainProfileViewModelFactory) : MainProfileViewModel = ViewModelProviders.of(fragment,factory)[MainProfileViewModel::class.java]
 
     @Provides
     fun factory() = MainProfileViewModelFactory()
