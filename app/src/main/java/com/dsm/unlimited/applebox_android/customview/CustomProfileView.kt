@@ -25,7 +25,7 @@ class CustomProfileView(val mContext : Context, val attr : AttributeSet?, val de
     private fun setAttrs(typedArray : TypedArray) {
         findViewById<TextView>(R.id.custom_view_profile_name_tv).text = typedArray.getString(R.styleable.ProfileView_name)
         findViewById<TextView>(R.id.custom_view_profile_club_name_tv).text = typedArray.getString(R.styleable.ProfileView_subName)
-        findViewById<TextView>(R.id.custom_view_profile_introduce_tv).text = typedArray.getString(R.styleable.ProfileView_subName) ?: ""
+        findViewById<TextView>(R.id.custom_view_profile_introduce_tv).text = typedArray.getString(R.styleable.ProfileView_introduce) ?: ""
         Glide.with(mContext)
             .load(typedArray.getString(R.styleable.ProfileView_image))
             .placeholder(R.drawable.ic_launcher_background)
@@ -34,4 +34,3 @@ class CustomProfileView(val mContext : Context, val attr : AttributeSet?, val de
     }
 
 }
-fun Context.getLayoutInflater(service : String) = this.getSystemService(service) as LayoutInflater
