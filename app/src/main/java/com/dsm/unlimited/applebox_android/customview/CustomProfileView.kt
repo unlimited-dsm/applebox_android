@@ -34,4 +34,3 @@ class CustomProfileView(val mContext : Context, val attr : AttributeSet?, val de
     }
 
 }
-fun Context.getLayoutInflater(service : String) = this.getSystemService(service) as LayoutInflater

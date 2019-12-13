@@ -6,4 +6,12 @@
         <attr name="subName" format="reference|string"/>
         <attr name="introduce" format="reference|string"/>
     </declare-styleable>
+
+    <declare-styleable name="CustomProfileView">
+        <attr name="icon" format="reference"/>
+        <attr name="iconColor" format="reference"/>
+        <attr name="badgeText" format="integer|reference"/>
+        <attr name="badgeColor" format="reference"/>
+        <attr name="badgeTextColor" format="reference"/>
+    </declare-styleable>
 </resources>
