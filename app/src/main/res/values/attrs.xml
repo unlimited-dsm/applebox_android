@@ -3,6 +3,6 @@
     <declare-styleable name="ProfileView">
         <attr name="image" format="reference|string"/>
         <attr name="name" format="reference|string"/>
-        <attr name="clubName" format="reference|string"/>
+        <attr name="subName" format="reference|string"/>
     </declare-styleable>
 </resources>
