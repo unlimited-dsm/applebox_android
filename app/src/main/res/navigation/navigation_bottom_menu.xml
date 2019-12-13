@@ -23,6 +23,8 @@
 
     <fragment
         android:id="@+id/item_chatting"
+        android:label="MainChatFragment"
+        android:name="com.dsm.unlimited.applebox_android.ui.fragment.MainChatFragment"
         tools:layout="@layout/fragment_main_chatting"/>
 
 </navigation>
