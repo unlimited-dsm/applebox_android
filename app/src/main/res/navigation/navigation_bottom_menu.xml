@@ -7,6 +7,8 @@
 
     <fragment
         android:id="@+id/item_club"
+        android:name="com.dsm.unlimited.applebox_android.ui.fragment.MainClubFragment"
+        android:label="ClubFragment"
         tools:layout="@layout/fragment_main_club"/>
 
     <fragment
