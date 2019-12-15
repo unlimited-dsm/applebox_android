@@ -1,5 +1,5 @@
 package com.dsm.unlimited.data
-
+/*
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
 
@@ -22,3 +22,4 @@ class ExampleInstrumentedTest {
         assertEquals("com.dsm.unlimited.data.test", appContext.packageName)
     }
 }
+*/

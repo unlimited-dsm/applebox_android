@@ -2,6 +2,7 @@ package com.dsm.unlimited.applebox_android.di.module.fragment
 
 import androidx.lifecycle.ViewModelProviders
 import com.dsm.unlimited.applebox_android.di.scope.MenuScope
+import com.dsm.unlimited.applebox_android.ui.fragment.MainClubFragment
 import com.dsm.unlimited.applebox_android.ui.fragment.MainFragment
 import com.dsm.unlimited.applebox_android.ui.fragment.MainProfileFragment
 import com.dsm.unlimited.applebox_android.viewmodel.MainViewModel
@@ -15,6 +16,9 @@ abstract class MainFragmentModule() {
     @MenuScope
     @ContributesAndroidInjector(modules = [MainProfileModule::class])
     abstract fun profileFragment() : MainProfileFragment
+
+    @ContributesAndroidInjector(modules = [MainClubModule::class])
+    abstract fun mainClubFragment() : MainClubFragment
 }
 
 @Module
