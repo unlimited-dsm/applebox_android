@@ -6,13 +6,12 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <androidx.appcompat.widget.AppCompatImageView
+    <com.dsm.unlimited.applebox_android.customview.CircleImageView
         android:id="@+id/custom_view_profile_image_iv"
         android:layout_width="96dp"
         android:layout_height="96dp"
         android:layout_marginStart="76dp"
         android:layout_marginTop="18dp"
-        android:foreground="@drawable/bg_circle_view"
         android:src="@drawable/ic_launcher_background"
         app:layout_constraintBottom_toTopOf="@+id/custom_view_profile_introduce_tv"
         app:layout_constraintStart_toStartOf="parent"
