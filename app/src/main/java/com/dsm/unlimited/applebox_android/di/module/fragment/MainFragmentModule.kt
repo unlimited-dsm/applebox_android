@@ -3,6 +3,7 @@ package com.dsm.unlimited.applebox_android.di.module.fragment
 import androidx.lifecycle.ViewModelProviders
 import com.dsm.unlimited.applebox_android.di.scope.MenuScope
 import com.dsm.unlimited.applebox_android.ui.fragment.MainClubFragment
+import com.dsm.unlimited.applebox_android.ui.fragment.MainChatFragment
 import com.dsm.unlimited.applebox_android.ui.fragment.MainFragment
 import com.dsm.unlimited.applebox_android.ui.fragment.MainProfileFragment
 import com.dsm.unlimited.applebox_android.viewmodel.MainViewModel
@@ -19,6 +20,9 @@ abstract class MainFragmentModule() {
 
     @ContributesAndroidInjector(modules = [MainClubModule::class])
     abstract fun mainClubFragment() : MainClubFragment
+
+    @ContributesAndroidInjector(modules = [MainChatModule::class])
+    abstract fun mainChatFragment() : MainChatFragment
 }
 
 @Module
