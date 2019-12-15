@@ -93,4 +93,7 @@ dependencies {
     def anko_version = '0.10.8'
     //anko
     implementation "org.jetbrains.anko:anko:$anko_version"
+
+    def viewpager2 = '1.0.0-beta03'
+    implementation "androidx.viewpager2:viewpager2:$viewpager2"
 }
