@@ -7,6 +7,7 @@ import com.dsm.unlimited.applebox_android.ui.fragment.MainChatFragment
 import com.dsm.unlimited.applebox_android.ui.fragment.MainFragment
 import com.dsm.unlimited.applebox_android.ui.fragment.MainProfileFragment
 import com.dsm.unlimited.applebox_android.ui.fragment.MainHomeFragment
+import com.dsm.unlimited.applebox_android.ui.fragment.MainPoliticsFragment
 import com.dsm.unlimited.applebox_android.viewmodel.MainViewModel
 import com.dsm.unlimited.applebox_android.viewmodel.MainViewModelFactory
 import dagger.Module
@@ -27,6 +28,9 @@ abstract class MainFragmentModule() {
 
     @ContributesAndroidInjector(modules = [MainHomeModule::class])
     abstract fun mainHomeFragment() : MainHomeFragment
+
+    @ContributesAndroidInjector(modules = [MainPoliticsModule::class])
+    abstract fun mainPoliticsFragment() : MainPoliticsFragment
 }
 
 @Module
