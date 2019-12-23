@@ -1,7 +1,11 @@
 package com.dsm.unlimited.applebox_android.ui.fragment
 
+import android.os.Bundle
+import android.view.View
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.dsm.unlimited.applebox_android.R
 import com.dsm.unlimited.applebox_android.databinding.FragmentMainChattingBinding
+import com.dsm.unlimited.applebox_android.ui.adapter.MainChatListAdapter
 import com.dsm.unlimited.applebox_android.ui.base.BaseFragment
 import com.dsm.unlimited.applebox_android.viewmodel.MainChatViewModel
 import javax.inject.Inject
@@ -12,4 +16,12 @@ class MainChatFragment() : BaseFragment<FragmentMainChattingBinding>() {
 
     @Inject
     override lateinit var viewModel: MainChatViewModel
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.mainChatChattingRecyclerview.apply {
+            adapter = MainChatListAdapter(this@MainChatFragment)
+            layoutManager = LinearLayoutManager(this@MainChatFragment.context)
+        }
+    }
 }

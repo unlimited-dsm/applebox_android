@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item android:actionLayout="@layout/view_badge_image_view" app:showAsAction="always" android:title="profile_notify_iv"/>
+    <item
+        android:title="profile_notify_iv"
+        app:actionLayout="@layout/view_badge_image_view"
+        app:showAsAction="always"
+        app:actionViewClass="com.dsm.unlimited.applebox_android.customview.BadgeImageView"/>
 </menu>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+
+    <com.dsm.unlimited.applebox_android.customview.CustomProfileView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:introduce="안녕 나는 전승민이야\nGIT : www.github.com/nwar-Jeon"
+        app:name="전승민"
+        app:subName="Unlimited"
+        />
+
+</LinearLayout>
+</layout>

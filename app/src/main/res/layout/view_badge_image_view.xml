@@ -4,14 +4,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
+    android:paddingEnd="16dp"
     android:layout_height="wrap_content">
 
     <ImageView
         android:id="@+id/custom_view_badge_image_view_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:background="@drawable/ic_notifications_black_24dp"
-        android:backgroundTint="@android:color/black"
+        android:backgroundTint="@color/gray"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,11 +20,11 @@
 
     <TextView
         android:id="@+id/custom_view_badge_image_view_text"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
         android:background="@drawable/bg_fill_circle_view"
         android:gravity="center"
-        android:text="4"
+        android:text="1"
         android:textColor="@android:color/white"
         android:textSize="8sp"
         app:layout_constraintDimensionRatio="1:1"

@@ -13,10 +13,14 @@
 
     <fragment
         android:id="@+id/item_politics"
+        android:name="com.dsm.unlimited.applebox_android.ui.fragment.MainPoliticsFragment"
+        android:label="PoliticsFragment"
         tools:layout="@layout/fragment_main_politics"/>
 
     <fragment
         android:id="@+id/item_home"
+        android:name="com.dsm.unlimited.applebox_android.ui.fragment.MainHomeFragment"
+        android:label="HomeFragment"
         tools:layout="@layout/fragment_main_home"/>
 
     <fragment

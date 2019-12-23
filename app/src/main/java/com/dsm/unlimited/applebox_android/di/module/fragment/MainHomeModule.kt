@@ -13,5 +13,5 @@ class MainHomeModule() {
     fun viewModel(fragment : MainHomeFragment, factory : MainHomeViewModelFactory) = ViewModelProviders.of(fragment, factory)[MainHomeViewModel::class.java]
 
     @Provides
-    fun factory() = MainHomeViewModel()
+    fun factory() = MainHomeViewModelFactory()
 }

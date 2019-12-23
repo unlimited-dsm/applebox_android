@@ -15,15 +15,15 @@ class BadgeImageView(val mContext : Context, val attr : AttributeSet?, val defSt
     constructor(mContext : Context, attr: AttributeSet?) : this(mContext, attr, 0)
     constructor(mContext: Context) : this(mContext, null, 0)
 
-    private val typedArray = mContext.obtainStyledAttributes(attr, R.styleable.CustomProfileView, defStyle, 0)
+    private val typedArray = mContext.obtainStyledAttributes(attr, R.styleable.BadgeImageView, defStyle, 0)
 
-    val icon by lazy { typedArray.getResourceId(R.styleable.CustomProfileView_icon,R.drawable.ic_notifications_black_24dp) }
-    val iconColor by lazy { typedArray.getResourceId(R.styleable.CustomProfileView_iconColor, R.color.gray) }
-    val badgeText by lazy { typedArray.getInteger(R.styleable.CustomProfileView_badgeText, 0) }
+    val icon by lazy { typedArray.getResourceId(R.styleable.BadgeImageView_icon,R.drawable.ic_notifications_black_24dp) }
+    val iconColor by lazy { typedArray.getResourceId(R.styleable.BadgeImageView_iconColor, R.color.gray) }
+    val badgeText by lazy { typedArray.getInteger(R.styleable.BadgeImageView_badgeText, 0) }
     val badgeVisibility : Boolean
         get() = badgeText!=0
-    val badgeColor by lazy { typedArray.getResourceId(R.styleable.CustomProfileView_badgeColor, R.color.colorPrimary) }
-    val badgeTextColor by lazy { typedArray.getResourceId(R.styleable.CustomProfileView_badgeTextColor, R.color.white) }
+    val badgeColor by lazy { typedArray.getResourceId(R.styleable.BadgeImageView_badgeColor, R.color.colorPrimary) }
+    val badgeTextColor by lazy { typedArray.getResourceId(R.styleable.BadgeImageView_badgeTextColor, R.color.white) }
 
     val iconImage by lazy { findViewById<ImageView>(R.id.custom_view_badge_image_view_image) }
     val badgeTextView by lazy { findViewById<TextView>(R.id.custom_view_badge_image_view_text) }

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_height="wrap_content">
+
+        <com.dsm.unlimited.applebox_android.customview.CustomProfileView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:introduce="우리는 짱짱 개 쩌는 동아리입니다"
+            app:name="Unlimited"
+            app:subName="APP"
+            />
+
+    </LinearLayout>
+</layout>

@@ -1,6 +1,7 @@
 package com.dsm.unlimited.applebox_android.ui.activity
 
 import android.os.Bundle
+import androidx.navigation.Navigation
 import com.dsm.unlimited.applebox_android.R
 import com.dsm.unlimited.applebox_android.databinding.ActivityMainBinding
 import com.dsm.unlimited.applebox_android.ui.base.BaseActivity
@@ -18,5 +19,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Navigation.findNavController(this,R.id.main_fragment)
     }
 }

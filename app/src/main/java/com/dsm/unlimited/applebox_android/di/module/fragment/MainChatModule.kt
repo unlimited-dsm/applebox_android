@@ -5,13 +5,13 @@ import com.dsm.unlimited.applebox_android.ui.fragment.MainChatFragment
 import com.dsm.unlimited.applebox_android.viewmodel.MainChatViewModel
 import com.dsm.unlimited.applebox_android.viewmodel.MainChatViewModelFactory
 import dagger.Module
-import javax.inject.Inject
+import dagger.Provides
 
 @Module
 class MainChatModule() {
-    @Inject
+    @Provides
     fun viewModel(fragment : MainChatFragment, factory : MainChatViewModelFactory) = ViewModelProviders.of(fragment, factory)[MainChatViewModel::class.java]
 
-    @Inject
+    @Provides
     fun factory() = MainChatViewModelFactory()
 }

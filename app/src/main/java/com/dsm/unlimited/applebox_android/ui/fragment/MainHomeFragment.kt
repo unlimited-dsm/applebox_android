@@ -1,7 +1,11 @@
 package com.dsm.unlimited.applebox_android.ui.fragment
 
+import android.os.Bundle
+import android.view.View
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.dsm.unlimited.applebox_android.R
 import com.dsm.unlimited.applebox_android.databinding.FragmentMainHomeBinding
+import com.dsm.unlimited.applebox_android.ui.adapter.MainHomeAdapter
 import com.dsm.unlimited.applebox_android.ui.base.BaseFragment
 import com.dsm.unlimited.applebox_android.viewmodel.MainHomeViewModel
 import javax.inject.Inject
@@ -12,4 +16,12 @@ class MainHomeFragment() : BaseFragment<FragmentMainHomeBinding>() {
 
     @Inject
     override lateinit var viewModel: MainHomeViewModel
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.mainHomePosterRecyclerview.apply {
+            adapter = MainHomeAdapter(this@MainHomeFragment)
+            layoutManager = LinearLayoutManager(this.context)
+        }
+    }
 }
