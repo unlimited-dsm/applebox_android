@@ -9,5 +9,14 @@
         android:id="@+id/mainFragment"
         android:name="com.dsm.unlimited.applebox_android.ui.fragment.MainFragment"
         android:label="MainFragment"
-        tools:layout="@layout/fragment_main"/>
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_notifyFragment"
+            app:destination="@id/notifyFragment" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_profile_notify"
+        android:id="@+id/notifyFragment"
+        android:name="com.dsm.unlimited.applebox_android.ui.fragment.NotifyFragment"
+        android:label="NotifyFragment" />
 </navigation>

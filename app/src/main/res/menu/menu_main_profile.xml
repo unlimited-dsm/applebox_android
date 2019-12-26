@@ -2,6 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
+        android:id="@+id/main_profile_notify_iv"
         android:title="profile_notify_iv"
         app:actionLayout="@layout/view_badge_image_view"
         app:showAsAction="always"
