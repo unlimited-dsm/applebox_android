@@ -57,3 +57,11 @@ fun BottomNavigationView.setBadge(context : Context, @LayoutRes badge : Int) {
         LayoutInflater.from(context).inflate(badge, itemView, true)
     }
 }
+
+infix fun Int.pxToDp(context : Context) = this / ( context.resources.displayMetrics.density )
+
+infix fun Float.pxToDp(context : Context) = this / ( context.resources.displayMetrics.density )
+
+infix fun Float.dpToPx(context : Context) = this * ( context.resources.displayMetrics.density )
+
+infix fun Int.dpToPx(context : Context) = this * ( context.resources.displayMetrics.density )
