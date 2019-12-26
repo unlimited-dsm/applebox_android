@@ -18,4 +18,11 @@
     <declare-styleable name="RoundImageView">
         <attr name="backGroundImage" format="string|reference"/>
     </declare-styleable>
+
+    <declare-styleable name="SelectFileFAB">
+        <attr name="fabSize"/>
+        <attr name="fabImage1"/>
+        <attr name="fabImage2"/>
+        <attr name="fabImage3"/>
+    </declare-styleable>
 </resources>

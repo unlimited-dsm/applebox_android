@@ -3,6 +3,7 @@ package com.dsm.unlimited.applebox_android.customview
 import android.content.Context
 import android.graphics.drawable.ShapeDrawable
 import android.graphics.drawable.shapes.OvalShape
+import android.util.DisplayMetrics
 import android.view.LayoutInflater
 import android.view.ViewOutlineProvider
 import androidx.appcompat.widget.AppCompatImageView
@@ -29,3 +30,11 @@ fun AppCompatImageView.toCircleImageView() = this.apply {
     background = ShapeDrawable(OvalShape())
     clipToOutline = true
 }
+
+infix fun Int.pxToDp(context : Context) = this / ( context.resources.displayMetrics.density )
+
+infix fun Float.pxToDp(context : Context) = this / ( context.resources.displayMetrics.density )
+
+infix fun Float.dpToPx(context : Context) = this * ( context.resources.displayMetrics.density )
+
+infix fun Int.dpToPx(context : Context) = this * ( context.resources.displayMetrics.density )
