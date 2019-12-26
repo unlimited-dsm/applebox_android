@@ -9,5 +9,14 @@
         android:id="@+id/mainFragment"
         android:name="com.dsm.unlimited.applebox_android.ui.fragment.MainFragment"
         android:label="MainFragment"
-        tools:layout="@layout/fragment_main"/>
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_chatting"
+        android:id="@+id/chatFragment"
+        android:name="com.dsm.unlimited.applebox_android.ui.fragment.ChatFragment"
+        android:label="ChatFragment" />
 </navigation>

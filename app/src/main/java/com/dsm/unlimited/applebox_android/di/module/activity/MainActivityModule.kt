@@ -1,9 +1,11 @@
 package com.dsm.unlimited.applebox_android.di.module.activity
 
 import androidx.lifecycle.ViewModelProviders
+import com.dsm.unlimited.applebox_android.di.module.fragment.ChatModule
 import com.dsm.unlimited.applebox_android.di.module.fragment.MainFragmentModule
 import com.dsm.unlimited.applebox_android.di.scope.FragmentScope
 import com.dsm.unlimited.applebox_android.ui.activity.MainActivity
+import com.dsm.unlimited.applebox_android.ui.fragment.ChatFragment
 import com.dsm.unlimited.applebox_android.ui.fragment.MainFragment
 import com.dsm.unlimited.applebox_android.viewmodel.ActivityViewModel
 import com.dsm.unlimited.applebox_android.viewmodel.ActivityViewModelFactory
@@ -17,6 +19,9 @@ abstract class MainActivityModule() {
     @ContributesAndroidInjector(modules = [MainFragmentModule::class])
     abstract fun mainFragment() : MainFragment
 
+    @FragmentScope
+    @ContributesAndroidInjector(modules = [ChatModule::class])
+    abstract fun chatFragment() : ChatFragment
 }
 
 @Module

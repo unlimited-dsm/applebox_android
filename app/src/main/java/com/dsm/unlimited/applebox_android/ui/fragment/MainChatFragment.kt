@@ -16,6 +16,8 @@ class MainChatFragment() : BaseFragment<FragmentMainChattingBinding>() {
 
     @Inject
     override lateinit var viewModel: MainChatViewModel
+    @Inject
+    lateinit var mainFragment: MainFragment
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
