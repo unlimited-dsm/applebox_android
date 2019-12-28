@@ -9,5 +9,22 @@
         android:id="@+id/mainFragment"
         android:name="com.dsm.unlimited.applebox_android.ui.fragment.MainFragment"
         android:label="MainFragment"
-        tools:layout="@layout/fragment_main"/>
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_homePosterFragment"
+            app:destination="@id/homePosterFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_homeWritePosterFragment"
+            app:destination="@id/homeWritePosterFragment" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_home_read_poster"
+        android:id="@+id/homePosterFragment"
+        android:name="com.dsm.unlimited.applebox_android.ui.fragment.HomeReadPosterFragment"
+        android:label="HomePosterFragment" />
+    <fragment
+        tools:layout="@layout/fragment_home_write_poster"
+        android:id="@+id/homeWritePosterFragment"
+        android:name="com.dsm.unlimited.applebox_android.ui.fragment.HomeWritePosterFragment"
+        android:label="HomeWritePosterFragment" />
 </navigation>

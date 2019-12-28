@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
+    <data>
+        <variable
+            name="vm"
+            type="com.dsm.unlimited.applebox_android.viewmodel.MainHomeViewModel" />
+    </data>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -15,6 +20,8 @@
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="32dp"
         android:layout_marginStart="32dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:onClick="@{()->vm.readPoster()}"
         app:cardElevation="8dp"
         app:cardCornerRadius="15dp"
 
