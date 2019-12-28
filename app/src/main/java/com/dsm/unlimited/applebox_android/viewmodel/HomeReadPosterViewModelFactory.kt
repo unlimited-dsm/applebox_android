@@ -4,6 +4,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.dsm.unlimited.applebox_android.util.BackNavigator
 
-class HomeWritePosterViewModelFactory(val backNavigator: BackNavigator) : ViewModelProvider.Factory{
+class HomeReadPosterViewModelFactory(val backNavigator: BackNavigator) : ViewModelProvider.Factory {
     override fun <T : ViewModel?> create(modelClass: Class<T>): T = modelClass.getConstructor(BackNavigator::class.java).newInstance(backNavigator)
 }
