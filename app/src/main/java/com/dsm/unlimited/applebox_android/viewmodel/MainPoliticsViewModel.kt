@@ -16,4 +16,8 @@ class MainPoliticsViewModel(val politicsNavigator: PoliticsNavigator) : BaseView
     fun readPolitics() = politicsNavigator.readPolitics()
 
     fun writePolitics() = politicsNavigator.writePolitics()
+
+    fun search() {
+
+    }
 }

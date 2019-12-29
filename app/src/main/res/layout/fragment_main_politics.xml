@@ -39,6 +39,7 @@
                 android:layout_marginEnd="16dp"
                 android:src="@drawable/ic_search_black_24dp"
                 android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                android:onClick="@{() -> vm.search()}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
