@@ -1,7 +1,9 @@
 package com.dsm.unlimited.applebox_android.customview
 
 import android.content.Context
+import android.graphics.Canvas
 import android.util.AttributeSet
+import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
@@ -19,7 +21,11 @@ class BadgeImageView(val mContext : Context, val attr : AttributeSet?, val defSt
 
     val icon by lazy { typedArray.getResourceId(R.styleable.BadgeImageView_icon,R.drawable.ic_notifications_black_24dp) }
     val iconColor by lazy { typedArray.getResourceId(R.styleable.BadgeImageView_iconColor, R.color.gray) }
-    val badgeText by lazy { typedArray.getInteger(R.styleable.BadgeImageView_badgeText, 0) }
+    var badgeText = 0
+    set(value) {
+        field = value
+        invalidate()
+    }
     val badgeVisibility : Boolean
         get() = badgeText!=0
     val badgeColor by lazy { typedArray.getResourceId(R.styleable.BadgeImageView_badgeColor, R.color.colorPrimary) }
@@ -30,6 +36,11 @@ class BadgeImageView(val mContext : Context, val attr : AttributeSet?, val defSt
 
     init {
         addView(mContext.getLayoutInflater(Context.LAYOUT_INFLATER_SERVICE).inflate(R.layout.view_badge_image_view, this,false))
+    }
+
+    override fun onDraw(canvas: Canvas?) {
+        super.onDraw(canvas)
+        Log.e(this.javaClass.simpleName,badgeText.toString())
         setAttrs()
     }
 
@@ -44,6 +55,5 @@ class BadgeImageView(val mContext : Context, val attr : AttributeSet?, val defSt
             this.backgroundTintList = ContextCompat.getColorStateList(mContext, badgeColor)
             this.textColor = ContextCompat.getColor(mContext,badgeTextColor)
         }
-        typedArray.recycle()
     }
 }
