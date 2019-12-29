@@ -9,5 +9,14 @@
         android:id="@+id/mainFragment"
         android:name="com.dsm.unlimited.applebox_android.ui.fragment.MainFragment"
         android:label="MainFragment"
-        tools:layout="@layout/fragment_main"/>
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_channelFragment"
+            app:destination="@id/channelFragment" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_channel"
+        android:id="@+id/channelFragment"
+        android:name="com.dsm.unlimited.applebox_android.ui.fragment.ChannelFragment"
+        android:label="ChannelFragment" />
 </navigation>

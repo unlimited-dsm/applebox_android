@@ -27,3 +27,7 @@ fun getSimpleChat() = SimpleChat()
 fun getProfile() = Profile("","","","")
 
 fun getProfileList(size : Int) = List<Profile>(size){ getProfile()}
+
+fun getChannelChatting() = ChannelChatting("","","",null,"")
+
+fun getChannelChattingList(size : Int) = List(size){ getChannelChatting() }

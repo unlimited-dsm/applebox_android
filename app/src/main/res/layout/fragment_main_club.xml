@@ -2,6 +2,11 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="vm"
+            type="com.dsm.unlimited.applebox_android.viewmodel.MainClubViewModel" />
+    </data>
 <androidx.coordinatorlayout.widget.CoordinatorLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -34,6 +39,7 @@
                 android:layout_marginEnd="16dp"
                 android:src="@drawable/ic_add_black_24dp"
                 android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                android:onClick="@{() -> vm.addChannel()}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
