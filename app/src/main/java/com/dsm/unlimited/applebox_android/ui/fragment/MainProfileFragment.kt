@@ -10,11 +10,12 @@ import com.dsm.unlimited.applebox_android.R
 import com.dsm.unlimited.applebox_android.databinding.FragmentMainProfileBinding
 import com.dsm.unlimited.applebox_android.ui.adapter.MainProfileAdapter
 import com.dsm.unlimited.applebox_android.ui.base.BaseFragment
+import com.dsm.unlimited.applebox_android.util.ProfileNavigator
 import com.dsm.unlimited.applebox_android.viewmodel.MainProfileViewModel
 import org.jetbrains.anko.toolbar
 import javax.inject.Inject
 
-class MainProfileFragment() : BaseFragment<FragmentMainProfileBinding>() {
+class MainProfileFragment() : BaseFragment<FragmentMainProfileBinding>(), ProfileNavigator {
     override val layout: Int
         get() = R.layout.fragment_main_profile
 
@@ -33,11 +34,9 @@ class MainProfileFragment() : BaseFragment<FragmentMainProfileBinding>() {
         }
     }
 
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        super.onCreateOptionsMenu(menu, inflater)
-        menu.findItem(R.id.main_profile_notify_iv).setOnMenuItemClickListener {
-            mainFragment.navigateToNotify()
-            true
-        }
+    override fun readPoster() {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
+
+    override fun showNotificate() = mainFragment.navigateToNotify()
 }
