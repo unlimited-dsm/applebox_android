@@ -19,7 +19,11 @@ class BadgeImageView(val mContext : Context, val attr : AttributeSet?, val defSt
 
     val icon by lazy { typedArray.getResourceId(R.styleable.CustomProfileView_icon,R.drawable.ic_notifications_black_24dp) }
     val iconColor by lazy { typedArray.getResourceId(R.styleable.CustomProfileView_iconColor, R.color.gray) }
-    val badgeText by lazy { typedArray.getInteger(R.styleable.CustomProfileView_badgeText, 0) }
+    var badgeText = 0
+    set(value) {
+        badgeText = value
+        badgeTextView.text = value.toString()
+    }
     val badgeVisibility : Boolean
         get() = badgeText!=0
     val badgeColor by lazy { typedArray.getResourceId(R.styleable.CustomProfileView_badgeColor, R.color.colorPrimary) }
