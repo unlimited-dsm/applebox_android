@@ -16,4 +16,8 @@ class MainHomeViewModel(val navigator : HomeNavigator) : BaseViewModel() {
     fun writePoster() = navigator.navigateWritePoster()
 
     fun readPoster() = navigator.navigateReadPoster()
+
+    fun search() {
+
+    }
 }
