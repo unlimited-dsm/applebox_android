@@ -6,8 +6,7 @@ import com.dsm.unlimited.applebox_android.ui.fragment.MainChatFragment
 
 class MainChatListViewHolder(val fragment : MainChatFragment, val binding : ItemChatSimpleBinding) : BaseViewHolder(binding) {
     override fun bind(position: Int) {
-        binding.chatListBg.setOnClickListener {
-            fragment.mainFragment.navigateChatting()
-        }
+        binding.vm = fragment.viewModel
+        binding.lifecycleOwner = fragment
     }
 }
