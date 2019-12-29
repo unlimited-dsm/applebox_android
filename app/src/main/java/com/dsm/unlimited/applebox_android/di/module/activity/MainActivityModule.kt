@@ -2,9 +2,13 @@ package com.dsm.unlimited.applebox_android.di.module.activity
 
 import androidx.lifecycle.ViewModelProviders
 import com.dsm.unlimited.applebox_android.di.module.fragment.MainFragmentModule
+import com.dsm.unlimited.applebox_android.di.module.fragment.PoliticsReadPosterModule
+import com.dsm.unlimited.applebox_android.di.module.fragment.PoliticsWritePosterModule
 import com.dsm.unlimited.applebox_android.di.scope.FragmentScope
 import com.dsm.unlimited.applebox_android.ui.activity.MainActivity
 import com.dsm.unlimited.applebox_android.ui.fragment.MainFragment
+import com.dsm.unlimited.applebox_android.ui.fragment.PoliticsReadPosterFragment
+import com.dsm.unlimited.applebox_android.ui.fragment.PoliticsWritePosterFragment
 import com.dsm.unlimited.applebox_android.viewmodel.ActivityViewModel
 import com.dsm.unlimited.applebox_android.viewmodel.ActivityViewModelFactory
 import dagger.Module
@@ -17,6 +21,13 @@ abstract class MainActivityModule() {
     @ContributesAndroidInjector(modules = [MainFragmentModule::class])
     abstract fun mainFragment() : MainFragment
 
+    @FragmentScope
+    @ContributesAndroidInjector(modules = [PoliticsWritePosterModule::class])
+    abstract fun politicsWritePosterFragment() : PoliticsWritePosterFragment
+
+    @FragmentScope
+    @ContributesAndroidInjector(modules = [PoliticsReadPosterModule::class])
+    abstract fun politicsReadPosterFragment() : PoliticsReadPosterFragment
 }
 
 @Module

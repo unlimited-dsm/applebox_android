@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
+    <data>
+        <variable
+            name="vm"
+            type="com.dsm.unlimited.applebox_android.viewmodel.MainPoliticsViewModel" />
+    </data>
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:onClick="@{()->vm.readPolitics()}"
+    android:foreground="?android:attr/selectableItemBackgroundBorderless"
     app:cardCornerRadius="10dp"
     app:cardPreventCornerOverlap="false"
     android:layout_width="match_parent"

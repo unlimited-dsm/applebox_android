@@ -27,3 +27,7 @@ fun getSimpleChat() = SimpleChat()
 fun getProfile() = Profile("","","","")
 
 fun getProfileList(size : Int) = List<Profile>(size){ getProfile()}
+
+fun getComment() = Comment("","","")
+
+fun getCommentList(size : Int) = List(size) { getComment() }
