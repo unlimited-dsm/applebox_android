@@ -3,6 +3,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
     <data>
+        <variable
+            name="vm"
+            type="com.dsm.unlimited.applebox_android.viewmodel.NotifyViewModel" />
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -16,6 +19,8 @@
             android:layout_marginTop="16dp"
             android:src="@drawable/ic_arrow_back_black_24dp"
             android:tint="@color/colorPrimary"
+            android:onClick="@{()->vm.backPressed()}"
+            android:foreground="?android:attr/selectableItemBackgroundBorderless"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 

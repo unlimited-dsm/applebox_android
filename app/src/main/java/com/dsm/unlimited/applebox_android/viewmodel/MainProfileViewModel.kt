@@ -7,7 +7,7 @@ import com.dsm.unlimited.applebox_android.viewmodel.base.BaseViewModel
 
 class MainProfileViewModel(val profileNavigator: ProfileNavigator) : BaseViewModel() {
 
-    val notificationCount = MutableLiveData<Int>(5)
+    val notificationCount = MutableLiveData<Int>()
 
     override fun apply(event: Lifecycle.Event) {
 

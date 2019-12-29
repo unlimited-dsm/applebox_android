@@ -1,9 +1,10 @@
 package com.dsm.unlimited.applebox_android.viewmodel
 
 import androidx.lifecycle.Lifecycle
+import com.dsm.unlimited.applebox_android.util.BackNavigator
 import com.dsm.unlimited.applebox_android.viewmodel.base.BaseViewModel
 
-class NotifyViewModel() : BaseViewModel() {
+class NotifyViewModel(val backNavigator: BackNavigator) : BaseViewModel() {
     override fun apply(event: Lifecycle.Event) {
 
     }
@@ -11,4 +12,6 @@ class NotifyViewModel() : BaseViewModel() {
     override fun clear() {
 
     }
+
+    fun backPressed() = backNavigator.backNavigate()
 }
