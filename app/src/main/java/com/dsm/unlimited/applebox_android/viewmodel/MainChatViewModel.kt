@@ -15,4 +15,8 @@ class MainChatViewModel(val chatNavigator: ChatNavigator) : BaseViewModel() {
     }
 
     fun chatNavigate() = chatNavigator.chatNavigate()
+
+    fun search() {
+
+    }
 }
