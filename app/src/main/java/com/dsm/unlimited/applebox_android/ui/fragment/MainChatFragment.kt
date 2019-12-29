@@ -26,6 +26,7 @@ class MainChatFragment() : BaseFragment<FragmentMainChattingBinding>(), ChatNavi
             adapter = MainChatListAdapter(this@MainChatFragment)
             layoutManager = LinearLayoutManager(this@MainChatFragment.context)
         }
+        binding.vm = viewModel
     }
 
     override fun chatNavigate() = mainFragment.navigateChatting()
