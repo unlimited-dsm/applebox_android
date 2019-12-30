@@ -25,4 +25,7 @@
         <attr name="fabImage2"/>
         <attr name="fabImage3"/>
     </declare-styleable>
+
+    <declare-styleable name="ChannelSpinner">
+    </declare-styleable>
 </resources>
