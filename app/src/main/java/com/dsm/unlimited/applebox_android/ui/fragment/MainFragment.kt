@@ -31,4 +31,8 @@ class MainFragment() : BaseFragment<FragmentMainBinding>() {
     }
 
     fun navigateToNotify() = NavHostFragment.findNavController(this).navigate(R.id.action_mainFragment_to_notifyFragment)
+
+    fun navigateChatting() {
+        NavHostFragment.findNavController(this).navigate(R.id.action_mainFragment_to_chatFragment)
+    }
 }

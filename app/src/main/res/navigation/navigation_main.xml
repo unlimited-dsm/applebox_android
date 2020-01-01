@@ -11,6 +11,9 @@
         android:label="MainFragment"
         tools:layout="@layout/fragment_main">
         <action
+            android:id="@+id/action_mainFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+        <action
             android:id="@+id/action_mainFragment_to_notifyFragment"
             app:destination="@id/notifyFragment" />
         <action
@@ -59,4 +62,9 @@
         android:id="@+id/notifyFragment"
         android:name="com.dsm.unlimited.applebox_android.ui.fragment.NotifyFragment"
         android:label="NotifyFragment" />
+    <fragment
+        tools:layout="@layout/fragment_chatting"
+        android:id="@+id/chatFragment"
+        android:name="com.dsm.unlimited.applebox_android.ui.fragment.ChatFragment"
+        android:label="ChatFragment" />
 </navigation>

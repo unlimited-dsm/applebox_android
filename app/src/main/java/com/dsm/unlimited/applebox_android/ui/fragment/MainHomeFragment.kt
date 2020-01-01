@@ -2,7 +2,6 @@ package com.dsm.unlimited.applebox_android.ui.fragment
 
 import android.os.Bundle
 import android.view.View
-import androidx.navigation.Navigation
 import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dsm.unlimited.applebox_android.R
@@ -14,6 +13,7 @@ import com.dsm.unlimited.applebox_android.viewmodel.MainHomeViewModel
 import javax.inject.Inject
 
 class MainHomeFragment() : BaseFragment<FragmentMainHomeBinding>(), HomeNavigator {
+
     override val layout: Int
         get() = R.layout.fragment_main_home
 

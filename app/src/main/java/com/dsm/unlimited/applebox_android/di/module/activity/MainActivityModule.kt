@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModelProviders
 import com.dsm.unlimited.applebox_android.di.module.fragment.ChannelModule
 import com.dsm.unlimited.applebox_android.di.module.fragment.HomeReadPosterModule
 import com.dsm.unlimited.applebox_android.di.module.fragment.HomeWritePosterModule
+import com.dsm.unlimited.applebox_android.di.module.fragment.ChatModule
 import com.dsm.unlimited.applebox_android.di.module.fragment.MainFragmentModule
 import com.dsm.unlimited.applebox_android.di.module.fragment.PoliticsReadPosterModule
 import com.dsm.unlimited.applebox_android.di.module.fragment.PoliticsWritePosterModule
@@ -13,6 +14,7 @@ import com.dsm.unlimited.applebox_android.ui.activity.MainActivity
 import com.dsm.unlimited.applebox_android.ui.fragment.ChannelFragment
 import com.dsm.unlimited.applebox_android.ui.fragment.HomeReadPosterFragment
 import com.dsm.unlimited.applebox_android.ui.fragment.HomeWritePosterFragment
+import com.dsm.unlimited.applebox_android.ui.fragment.ChatFragment
 import com.dsm.unlimited.applebox_android.ui.fragment.MainFragment
 import com.dsm.unlimited.applebox_android.ui.fragment.PoliticsReadPosterFragment
 import com.dsm.unlimited.applebox_android.ui.fragment.PoliticsWritePosterFragment
@@ -52,6 +54,10 @@ abstract class MainActivityModule() {
     @FragmentScope
     @ContributesAndroidInjector(modules = [NotifyModule::class])
     abstract fun notifyFragment() : NotifyFragment
+
+    @FragmentScope
+    @ContributesAndroidInjector(modules = [ChatModule::class])
+    abstract fun chatFragment() : ChatFragment
 }
 
 @Module
