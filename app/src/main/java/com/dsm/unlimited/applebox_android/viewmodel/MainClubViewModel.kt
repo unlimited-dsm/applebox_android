@@ -5,6 +5,7 @@ import com.dsm.unlimited.applebox_android.util.ChannelNavigator
 import com.dsm.unlimited.applebox_android.viewmodel.base.BaseViewModel
 
 class MainClubViewModel(val channelNavigator: ChannelNavigator) : BaseViewModel() {
+
     override fun apply(event: Lifecycle.Event) {
 
     }
@@ -13,9 +14,27 @@ class MainClubViewModel(val channelNavigator: ChannelNavigator) : BaseViewModel(
 
     }
 
+    fun navigateChannel() = channelNavigator.navigateChannel()
+
     fun addChannel() {
 
     }
 
-    fun navigateChannel() = channelNavigator.navigateChannel()
+    fun editChannel() {
+
+    }
+
+    fun addMember() {
+
+    }
+
+    fun deleteChannel() {
+        channelNavigator.navigateDeleteChannel()
+    }
+
+    fun applyDeleteChannel() {
+        channelNavigator.deleteChannelDialogApply()
+    }
+
+        fun cancelDeleteChannel() = channelNavigator.deleteChannelDialogCancel()
 }

@@ -1,6 +1,7 @@
 package com.dsm.unlimited.applebox_android.di.module.fragment
 
 import androidx.lifecycle.ViewModelProviders
+import com.dsm.unlimited.applebox_android.ui.dialog.DeleteChannelDialog
 import com.dsm.unlimited.applebox_android.ui.fragment.MainClubFragment
 import com.dsm.unlimited.applebox_android.util.ChannelNavigator
 import com.dsm.unlimited.applebox_android.viewmodel.MainClubViewModel
@@ -18,4 +19,7 @@ class MainClubModule() {
 
     @Provides
     fun channelNavigator(fragment: MainClubFragment) : ChannelNavigator = fragment
+
+    @Provides
+    fun deleteChannelDialog(viewModel : MainClubViewModel) = DeleteChannelDialog(viewModel)
 }
