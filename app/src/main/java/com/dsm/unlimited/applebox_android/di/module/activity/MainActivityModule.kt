@@ -7,6 +7,7 @@ import com.dsm.unlimited.applebox_android.di.module.fragment.HomeWritePosterModu
 import com.dsm.unlimited.applebox_android.di.module.fragment.MainFragmentModule
 import com.dsm.unlimited.applebox_android.di.module.fragment.PoliticsReadPosterModule
 import com.dsm.unlimited.applebox_android.di.module.fragment.PoliticsWritePosterModule
+import com.dsm.unlimited.applebox_android.di.module.fragment.NotifyModule
 import com.dsm.unlimited.applebox_android.di.scope.FragmentScope
 import com.dsm.unlimited.applebox_android.ui.activity.MainActivity
 import com.dsm.unlimited.applebox_android.ui.fragment.ChannelFragment
@@ -15,6 +16,7 @@ import com.dsm.unlimited.applebox_android.ui.fragment.HomeWritePosterFragment
 import com.dsm.unlimited.applebox_android.ui.fragment.MainFragment
 import com.dsm.unlimited.applebox_android.ui.fragment.PoliticsReadPosterFragment
 import com.dsm.unlimited.applebox_android.ui.fragment.PoliticsWritePosterFragment
+import com.dsm.unlimited.applebox_android.ui.fragment.NotifyFragment
 import com.dsm.unlimited.applebox_android.viewmodel.ActivityViewModel
 import com.dsm.unlimited.applebox_android.viewmodel.ActivityViewModelFactory
 import dagger.Module
@@ -46,6 +48,10 @@ abstract class MainActivityModule() {
     @FragmentScope
     @ContributesAndroidInjector(modules = [HomeWritePosterModule::class])
     abstract fun headWritePosterFragment() : HomeWritePosterFragment
+
+    @FragmentScope
+    @ContributesAndroidInjector(modules = [NotifyModule::class])
+    abstract fun notifyFragment() : NotifyFragment
 }
 
 @Module
