@@ -2,6 +2,7 @@ package com.dsm.unlimited.applebox_android.di.module.fragment
 
 import androidx.lifecycle.ViewModelProviders
 import com.dsm.unlimited.applebox_android.ui.fragment.MainHomeFragment
+import com.dsm.unlimited.applebox_android.util.HomeNavigator
 import com.dsm.unlimited.applebox_android.viewmodel.MainHomeViewModel
 import com.dsm.unlimited.applebox_android.viewmodel.MainHomeViewModelFactory
 import dagger.Module
@@ -13,5 +14,8 @@ class MainHomeModule() {
     fun viewModel(fragment : MainHomeFragment, factory : MainHomeViewModelFactory) = ViewModelProviders.of(fragment, factory)[MainHomeViewModel::class.java]
 
     @Provides
-    fun factory() = MainHomeViewModelFactory()
+    fun factory(navigator: HomeNavigator) = MainHomeViewModelFactory(navigator)
+
+    @Provides
+    fun navigator(fragment : MainHomeFragment) : HomeNavigator = fragment
 }

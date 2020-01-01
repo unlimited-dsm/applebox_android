@@ -6,6 +6,7 @@ import com.dsm.unlimited.applebox_android.ui.fragment.MainHomeFragment
 
 class MainHomePosterViewHolder(val fragment : MainHomeFragment, val binding : ItemHomePosterBinding) : BaseViewHolder(binding) {
     override fun bind(position: Int) {
-
+        binding.vm = fragment.viewModel
+        binding.lifecycleOwner = fragment
     }
 }

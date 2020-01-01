@@ -2,12 +2,16 @@ package com.dsm.unlimited.applebox_android.di.module.activity
 
 import androidx.lifecycle.ViewModelProviders
 import com.dsm.unlimited.applebox_android.di.module.fragment.ChannelModule
+import com.dsm.unlimited.applebox_android.di.module.fragment.HomeReadPosterModule
+import com.dsm.unlimited.applebox_android.di.module.fragment.HomeWritePosterModule
 import com.dsm.unlimited.applebox_android.di.module.fragment.MainFragmentModule
 import com.dsm.unlimited.applebox_android.di.module.fragment.PoliticsReadPosterModule
 import com.dsm.unlimited.applebox_android.di.module.fragment.PoliticsWritePosterModule
 import com.dsm.unlimited.applebox_android.di.scope.FragmentScope
 import com.dsm.unlimited.applebox_android.ui.activity.MainActivity
 import com.dsm.unlimited.applebox_android.ui.fragment.ChannelFragment
+import com.dsm.unlimited.applebox_android.ui.fragment.HomeReadPosterFragment
+import com.dsm.unlimited.applebox_android.ui.fragment.HomeWritePosterFragment
 import com.dsm.unlimited.applebox_android.ui.fragment.MainFragment
 import com.dsm.unlimited.applebox_android.ui.fragment.PoliticsReadPosterFragment
 import com.dsm.unlimited.applebox_android.ui.fragment.PoliticsWritePosterFragment
@@ -34,6 +38,14 @@ abstract class MainActivityModule() {
     @FragmentScope
     @ContributesAndroidInjector(modules = [PoliticsReadPosterModule::class])
     abstract fun politicsReadPosterFragment() : PoliticsReadPosterFragment
+
+    @FragmentScope
+    @ContributesAndroidInjector(modules = [HomeReadPosterModule::class])
+    abstract fun homeReadPosterFragment() : HomeReadPosterFragment
+
+    @FragmentScope
+    @ContributesAndroidInjector(modules = [HomeWritePosterModule::class])
+    abstract fun headWritePosterFragment() : HomeWritePosterFragment
 }
 
 @Module

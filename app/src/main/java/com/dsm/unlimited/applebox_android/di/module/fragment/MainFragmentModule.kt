@@ -3,6 +3,13 @@ package com.dsm.unlimited.applebox_android.di.module.fragment
 import androidx.lifecycle.ViewModelProviders
 import com.dsm.unlimited.applebox_android.di.scope.MenuScope
 import com.dsm.unlimited.applebox_android.ui.fragment.*
+import com.dsm.unlimited.applebox_android.ui.fragment.MainClubFragment
+import com.dsm.unlimited.applebox_android.ui.fragment.MainChatFragment
+import com.dsm.unlimited.applebox_android.ui.fragment.MainFragment
+import com.dsm.unlimited.applebox_android.ui.fragment.MainProfileFragment
+import com.dsm.unlimited.applebox_android.ui.fragment.MainHomeFragment
+import com.dsm.unlimited.applebox_android.ui.fragment.MainPoliticsFragment
+import com.dsm.unlimited.applebox_android.util.HomeNavigator
 import com.dsm.unlimited.applebox_android.viewmodel.MainViewModel
 import com.dsm.unlimited.applebox_android.viewmodel.MainViewModelFactory
 import dagger.Module
