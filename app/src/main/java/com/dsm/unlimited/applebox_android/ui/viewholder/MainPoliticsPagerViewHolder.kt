@@ -6,6 +6,7 @@ import com.dsm.unlimited.applebox_android.ui.fragment.MainPoliticsFragment
 
 class MainPoliticsPagerViewHolder(val fragment : MainPoliticsFragment, val binding : ItemPoliticsTopPosterBinding) : BaseViewHolder(binding) {
     override fun bind(position: Int) {
-
+        binding.vm = fragment.viewModel
+        binding.lifecycleOwner = fragment
     }
 }

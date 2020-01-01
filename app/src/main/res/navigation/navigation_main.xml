@@ -13,10 +13,26 @@
         <action
             android:id="@+id/action_mainFragment_to_channelFragment"
             app:destination="@id/channelFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_politicsWritePosterFragment"
+            app:destination="@id/politicsWritePosterFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_politicsReadPosterFragment"
+            app:destination="@id/politicsReadPosterFragment" />
     </fragment>
     <fragment
         tools:layout="@layout/fragment_channel"
         android:id="@+id/channelFragment"
         android:name="com.dsm.unlimited.applebox_android.ui.fragment.ChannelFragment"
         android:label="ChannelFragment" />
+    <fragment
+        tools:layout="@layout/fragment_politics_write_poster"
+        android:id="@+id/politicsWritePosterFragment"
+        android:name="com.dsm.unlimited.applebox_android.ui.fragment.PoliticsWritePosterFragment"
+        android:label="PoliticsWritePosterFragment" />
+    <fragment
+        tools:layout="@layout/fragment_politics_read_poster"
+        android:id="@+id/politicsReadPosterFragment"
+        android:name="com.dsm.unlimited.applebox_android.ui.fragment.PoliticsReadPosterFragment"
+        android:label="PoliticsReadPosterFragment" />
 </navigation>

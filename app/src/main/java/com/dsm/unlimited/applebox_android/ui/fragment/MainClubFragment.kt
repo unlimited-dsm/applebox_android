@@ -8,9 +8,9 @@ import com.dsm.unlimited.applebox_android.R
 import com.dsm.unlimited.applebox_android.databinding.FragmentMainClubBinding
 import com.dsm.unlimited.applebox_android.ui.adapter.MainClubAdapter
 import com.dsm.unlimited.applebox_android.ui.base.BaseFragment
+import com.dsm.unlimited.applebox_android.ui.dialog.DeleteChannelDialog
 import com.dsm.unlimited.applebox_android.util.ChannelNavigator
 import com.dsm.unlimited.applebox_android.viewmodel.MainClubViewModel
-import com.dsm.unlimited.applebox_android.viewmodel.base.BaseViewModel
 import javax.inject.Inject
 
 class MainClubFragment() : BaseFragment<FragmentMainClubBinding>(), ChannelNavigator {
@@ -19,12 +19,14 @@ class MainClubFragment() : BaseFragment<FragmentMainClubBinding>(), ChannelNavig
 
     @Inject
     override lateinit var viewModel: MainClubViewModel
-
     @Inject
     lateinit var mainFragment: MainFragment
+    @Inject
+    lateinit var deleteChannelDialog: DeleteChannelDialog
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.vm = viewModel
         binding.mainClubChannelRecyclerview.apply {
             adapter = MainClubAdapter(this@MainClubFragment)
             layoutManager = LinearLayoutManager(this.context)
@@ -32,4 +34,14 @@ class MainClubFragment() : BaseFragment<FragmentMainClubBinding>(), ChannelNavig
     }
 
     override fun navigateChannel() = NavHostFragment.findNavController(mainFragment).navigate(R.id.action_mainFragment_to_channelFragment)
+
+    override fun navigateDeleteChannel() = deleteChannelDialog.show(fragmentManager!!)
+
+    override fun deleteChannelDialogApply() {
+        deleteChannelDialog.dismiss()
+    }
+
+    override fun deleteChannelDialogCancel() {
+        deleteChannelDialog.dismiss()
+    }
 }

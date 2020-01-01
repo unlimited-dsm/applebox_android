@@ -8,5 +8,6 @@ class MainClubChannelViewHolder(val fragment : MainClubFragment, val binding : I
     override fun bind(position: Int) {
         binding.vm = fragment.viewModel
         binding.lifecycleOwner = fragment
+        binding.clubChannelChannelSpinner.bringToFront()
     }
 }

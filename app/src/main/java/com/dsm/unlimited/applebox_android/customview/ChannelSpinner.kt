@@ -23,34 +23,18 @@ class ChannelSpinner(mContext : Context, attr : AttributeSet?, defStyle : Int) :
 
     val backGround by lazy { findViewById<MaterialCardView>(R.id.channel_spinner_option_list) }
 
-    val text1 by lazy { findViewById<AppCompatTextView>(R.id.channel_spinner_text1) }
-    val text2 by lazy { findViewById<AppCompatTextView>(R.id.channel_spinner_text2) }
-    val text3 by lazy { findViewById<AppCompatTextView>(R.id.channel_spinner_text3) }
-
-    var text1Click : OnClickListener? = null
-    set(value) {
-        println(value.toString())
-        field = value
-        text1.setOnClickListener { value }
-    }
-    var text2Click : OnClickListener? = null
-        set(value) {
-            field = value
-            text2.setOnClickListener { value }
-        }
-    var text3Click : OnClickListener? = null
-        set(value) {
-            field = value
-            text3.setOnClickListener { value }
-        }
+    lateinit var text1 : AppCompatTextView
+    lateinit var text2 : AppCompatTextView
+    lateinit var text3 : AppCompatTextView
 
     init {
         addView(mContext.getLayoutInflater(Context.LAYOUT_INFLATER_SERVICE).inflate(R.layout.view_channel_spinner, this,false))
         optionButton.setOnClickListener { optionSelected = !optionSelected }
         optionSelected = false
-        text1.setOnClickListener { text1Click }
-        text2.setOnClickListener { text2Click }
-        text3.setOnClickListener { text3Click }
+
+        text1 = findViewById<AppCompatTextView>(R.id.channel_spinner_text1)
+        text2 = findViewById<AppCompatTextView>(R.id.channel_spinner_text2)
+        text3 = findViewById<AppCompatTextView>(R.id.channel_spinner_text3)
     }
 
 

@@ -31,3 +31,7 @@ fun getProfileList(size : Int) = List<Profile>(size){ getProfile()}
 fun getChannelChatting() = ChannelChatting("","","",null,"")
 
 fun getChannelChattingList(size : Int) = List(size){ getChannelChatting() }
+
+fun getComment() = Comment("","","")
+
+fun getCommentList(size : Int) = List(size) { getComment() }

@@ -2,20 +2,25 @@ package com.dsm.unlimited.applebox_android.ui.fragment
 
 import android.os.Bundle
 import android.view.View
+import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dsm.unlimited.applebox_android.R
 import com.dsm.unlimited.applebox_android.databinding.FragmentMainPoliticsBinding
 import com.dsm.unlimited.applebox_android.ui.adapter.MainPoliticsAdapter
 import com.dsm.unlimited.applebox_android.ui.base.BaseFragment
+import com.dsm.unlimited.applebox_android.util.PoliticsNavigator
 import com.dsm.unlimited.applebox_android.viewmodel.MainPoliticsViewModel
 import javax.inject.Inject
 
-class MainPoliticsFragment() : BaseFragment<FragmentMainPoliticsBinding>() {
+class MainPoliticsFragment() : BaseFragment<FragmentMainPoliticsBinding>(), PoliticsNavigator {
     override val layout: Int
         get() = R.layout.fragment_main_politics
 
     @Inject
     override lateinit var viewModel: MainPoliticsViewModel
+
+    @Inject
+    lateinit var mainFragment: MainFragment
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -23,5 +28,10 @@ class MainPoliticsFragment() : BaseFragment<FragmentMainPoliticsBinding>() {
             adapter = MainPoliticsAdapter(this@MainPoliticsFragment)
             layoutManager = LinearLayoutManager(this.context)
         }
+        binding.vm = viewModel
     }
+
+    override fun readPolitics() = NavHostFragment.findNavController(mainFragment).navigate(R.id.action_mainFragment_to_politicsReadPosterFragment)
+
+    override fun writePolitics() = NavHostFragment.findNavController(mainFragment).navigate(R.id.action_mainFragment_to_politicsWritePosterFragment)
 }
