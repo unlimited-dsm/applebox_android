@@ -5,6 +5,7 @@ import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
+import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dsm.unlimited.applebox_android.R
 import com.dsm.unlimited.applebox_android.databinding.FragmentMainProfileBinding
@@ -35,7 +36,7 @@ class MainProfileFragment() : BaseFragment<FragmentMainProfileBinding>(), Profil
     }
 
     override fun readPoster() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        NavHostFragment.findNavController(mainFragment).navigate(R.id.action_mainFragment_to_homePosterFragment)
     }
 
     override fun showNotificate() = mainFragment.navigateToNotify()
