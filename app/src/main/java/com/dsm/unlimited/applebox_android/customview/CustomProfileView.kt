@@ -31,5 +31,4 @@ class CustomProfileView(val mContext : Context, val attr : AttributeSet?, val de
         }
         typedArray.recycle()
     }
-
 }

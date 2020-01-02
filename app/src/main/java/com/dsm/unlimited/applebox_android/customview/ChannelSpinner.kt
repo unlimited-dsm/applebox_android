@@ -23,9 +23,9 @@ class ChannelSpinner(mContext : Context, attr : AttributeSet?, defStyle : Int) :
 
     val backGround by lazy { findViewById<MaterialCardView>(R.id.channel_spinner_option_list) }
 
-    lateinit var text1 : AppCompatTextView
-    lateinit var text2 : AppCompatTextView
-    lateinit var text3 : AppCompatTextView
+    var text1 : AppCompatTextView
+    var text2 : AppCompatTextView
+    var text3 : AppCompatTextView
 
     init {
         addView(mContext.getLayoutInflater(Context.LAYOUT_INFLATER_SERVICE).inflate(R.layout.view_channel_spinner, this,false))

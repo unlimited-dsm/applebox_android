@@ -1,14 +1,11 @@
 package com.dsm.unlimited.applebox_android.ui.fragment
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import com.dsm.unlimited.applebox_android.R
-import com.dsm.unlimited.applebox_android.customview.setBadge
 import com.dsm.unlimited.applebox_android.databinding.FragmentMainBinding
 import com.dsm.unlimited.applebox_android.ui.base.BaseFragment
 import com.dsm.unlimited.applebox_android.viewmodel.MainViewModel

@@ -10,7 +10,6 @@ import com.dsm.unlimited.applebox_android.ui.adapter.ChannelAdapter
 import com.dsm.unlimited.applebox_android.ui.base.BaseFragment
 import com.dsm.unlimited.applebox_android.util.BackNavigator
 import com.dsm.unlimited.applebox_android.viewmodel.ChannelViewModel
-import com.dsm.unlimited.applebox_android.viewmodel.base.BaseViewModel
 import javax.inject.Inject
 
 class ChannelFragment() : BaseFragment<FragmentChannelBinding>(), BackNavigator {

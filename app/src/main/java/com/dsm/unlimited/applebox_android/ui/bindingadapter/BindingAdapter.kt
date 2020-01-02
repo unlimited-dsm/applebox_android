@@ -1,6 +1,5 @@
 package com.dsm.unlimited.applebox_android.ui.bindingadapter
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.TextView

@@ -1,9 +1,6 @@
 package com.dsm.unlimited.applebox_android.ui.fragment
 
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuInflater
-import android.view.MenuItem
 import android.view.View
 import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -13,7 +10,6 @@ import com.dsm.unlimited.applebox_android.ui.adapter.MainProfileAdapter
 import com.dsm.unlimited.applebox_android.ui.base.BaseFragment
 import com.dsm.unlimited.applebox_android.util.ProfileNavigator
 import com.dsm.unlimited.applebox_android.viewmodel.MainProfileViewModel
-import org.jetbrains.anko.toolbar
 import javax.inject.Inject
 
 class MainProfileFragment() : BaseFragment<FragmentMainProfileBinding>(), ProfileNavigator {

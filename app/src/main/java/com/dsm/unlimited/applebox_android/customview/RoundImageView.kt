@@ -1,16 +1,10 @@
 package com.dsm.unlimited.applebox_android.customview
 
 import android.content.Context
-import android.graphics.Bitmap
-import android.graphics.drawable.BitmapDrawable
-import android.graphics.drawable.Drawable
 import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatImageView
 import com.bumptech.glide.Glide
-import com.bumptech.glide.request.target.CustomTarget
-import com.bumptech.glide.request.transition.Transition
 import com.dsm.unlimited.applebox_android.R
-import org.jetbrains.anko.backgroundResource
 import org.jetbrains.anko.imageResource
 
 class RoundImageView(val mContext : Context, val attr : AttributeSet?, val defStyle : Int) : AppCompatImageView(mContext, attr, defStyle) {

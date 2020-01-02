@@ -6,7 +6,6 @@ import com.dsm.unlimited.applebox_android.R
 import com.dsm.unlimited.applebox_android.databinding.ActivityMainBinding
 import com.dsm.unlimited.applebox_android.ui.base.BaseActivity
 import com.dsm.unlimited.applebox_android.viewmodel.ActivityViewModel
-import com.dsm.unlimited.applebox_android.viewmodel.base.BaseViewModel
 import javax.inject.Inject
 
 class MainActivity : BaseActivity<ActivityMainBinding>() {
