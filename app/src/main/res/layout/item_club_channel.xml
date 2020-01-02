@@ -9,10 +9,17 @@
     </data>
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:onClick="@{() -> vm.navigateChannel()}"
-    android:foreground="?android:attr/selectableItemBackgroundBorderless"
-    android:paddingBottom="8dp">
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:onClick="@{() -> vm.navigateChannel()}"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
 
     <View
         android:id="@+id/view"
@@ -37,15 +44,16 @@
 
 
     <com.dsm.unlimited.applebox_android.customview.ChannelSpinner
+        android:id="@+id/club_channel_channel_spinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
         android:layout_marginEnd="16dp"
-        android:id="@+id/club_channel_channel_spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:onText1Click="@{() -> vm.editChannel()}"
         app:onText2Click="@{() -> vm.addMember()}"
-        app:onText3Click="@{() -> vm.deleteChannel()}"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:onText3Click="@{() -> vm.deleteChannel()}" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/appCompatTextView3"
@@ -73,11 +81,13 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:layout_marginBottom="8dp"
+        android:lineSpacingExtra="8dp"
         android:text="안녕 나는 전라도 사람\n전찬훈이야"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/appCompatImageView2"
         app:layout_constraintStart_toStartOf="@+id/appCompatTextView3"
-        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView3"
-        android:lineSpacingExtra="8dp"/>
+        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

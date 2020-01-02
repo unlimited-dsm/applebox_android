@@ -8,6 +8,5 @@ class MainProfilePosterViewHolder(val fragment: MainProfileFragment, val binding
     override fun bind(position: Int) {
         binding.vm = fragment.viewModel
         binding.lifecycleOwner = fragment
-        binding.mainProfileItemPin.bringToFront()
     }
 }

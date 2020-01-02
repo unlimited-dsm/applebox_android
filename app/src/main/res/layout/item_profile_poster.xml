@@ -1,36 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
     <data>
         <variable
             name="vm"
             type="com.dsm.unlimited.applebox_android.viewmodel.MainProfileViewModel" />
     </data>
 <androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
-
-    <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="26dp"
-        android:layout_height="26dp"
-        android:background="@drawable/bg_fill_circle_view"
-        android:id="@+id/main_profile_item_pin"
-        android:padding="4dp"
-        android:elevation="2dp"
-        android:src="@drawable/push_pin"
-        app:layout_constraintBottom_toTopOf="@+id/cardView"
-        app:layout_constraintEnd_toStartOf="@+id/cardView"
-        app:layout_constraintStart_toStartOf="@+id/cardView"
-        app:layout_constraintTop_toTopOf="@+id/cardView" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="16dp"
         android:layout_marginEnd="32dp"
         android:layout_marginStart="32dp"
         app:cardElevation="8dp"
@@ -138,6 +124,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="4dp"
                 android:text="PIN"
+                android:background="@drawable/ripple_circle_effect_white"
+                android:padding="4dp"
                 android:textColor="@color/colorPrimary"
                 android:textSize="14sp"
                 android:textStyle="bold"
@@ -147,6 +135,20 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/main_profile_item_pin"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/bg_fill_circle_view"
+        android:elevation="10dp"
+        android:padding="4dp"
+        android:src="@drawable/push_pin"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toStartOf="@+id/cardView"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toTopOf="@+id/cardView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

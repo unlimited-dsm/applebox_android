@@ -9,6 +9,10 @@ class MainProfileViewModel(val profileNavigator: ProfileNavigator) : BaseViewMod
 
     val notificationCount = MutableLiveData<Int>()
 
+    val isMyProfile = MutableLiveData<Boolean>(false)
+
+    val isEditMode = MutableLiveData(false)
+
     override fun apply(event: Lifecycle.Event) {
 
     }
@@ -20,4 +24,14 @@ class MainProfileViewModel(val profileNavigator: ProfileNavigator) : BaseViewMod
     fun showNotificate() = profileNavigator.showNotificate()
 
     fun readPoster() = profileNavigator.readPoster()
+
+    fun editProfile() = isEditMode.postValue(true)
+
+    fun applyEditProfile() {
+        isEditMode.postValue(false)
+    }
+
+    fun cancelEditProfile() {
+        isEditMode.postValue(false)
+    }
 }

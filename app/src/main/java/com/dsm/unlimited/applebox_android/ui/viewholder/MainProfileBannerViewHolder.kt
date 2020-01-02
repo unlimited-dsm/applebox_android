@@ -6,6 +6,7 @@ import com.dsm.unlimited.applebox_android.ui.fragment.MainProfileFragment
 
 class MainProfileBannerViewHolder(val fragment : MainProfileFragment, val binding : ItemProfileBannerBinding) : BaseViewHolder(binding){
     override fun bind(position: Int) {
-
+        binding.lifecycleOwner = fragment
+        binding.vm = fragment.viewModel
     }
 }
